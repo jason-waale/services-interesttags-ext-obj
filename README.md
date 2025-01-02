@@ -1,18 +1,17 @@
-# Salesforce DX Project: Next Steps
+# FSC InterestTags as an External Object POC
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Uses a SF Connect Custom Adaptor to create an external object on Interest Tags so it can be used with Standard Reports
 
-## How Do You Plan to Deploy Your Changes?
+## SETUP
+1. Deploy to an org that has both a SF Connect Licenese and an FSC License
+2. Setup Interest Tags
+3. Add SF Connect Data Source (Custom)
+4. Add External Object
+   * Ensure reporting is enabled
+5. Change the ClientId field to a Lookup field relating to Account
+6. Create a Custom Report Type with Accounts and Interest Tags
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## USEFUL LINKS
+- [Apex Connector Framework Getting Started](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_connector_start.htm)
+- [Connection Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_DataSource_Connection.htm?q=Connection%20Class)
+- [External Object Relationships](https://help.salesforce.com/s/articleView?id=platform.external_object_relationships.htm&type=5)
